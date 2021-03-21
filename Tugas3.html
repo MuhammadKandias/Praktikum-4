@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tugas 3</title>
+	<!-- untuk memanggil jquery -->
+	<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+	<style type="text/css">
+		.objek{
+			height: 182px;
+			width: 182px;
+			background-color: yellow;
+			}
+		div{
+			padding: 10px;
+			margin: 5px;
+		}
+	</style>
+	<script type="text/javascript">
+		//sebagai fungsi yang akan di jalankan
+		$(document).ready(function(){
+		// #tampilkan sebagai class dan objek akan muncul ketika di klik
+		$("#tampilkan").click(function(){
+			$("#objekgambar").fadeIn();
+				});
+		// #sembunikan sebagai class dan objek akan disembunyikan by klik
+		$("#sembunyikan").click(function(){
+			$("#objekgambar").hide();
+				});
+		// #menghilang sebagai class dan objek akan hilang dalam 0.3 detik
+		$("#menghilang").click(function(){
+			$("#objekgambar").fadeTo("slow", 0.3);
+				});
+	});
+	</script>
+</head>
+<body>
+	<div class="objek" id="objekgambar"></div>
+	<input id="sembunyikan" type="button"  value="fade out">
+	<input id="tampilkan" type="button"  value="fade in">
+	<input id="menghilang" type="button"  value="fade To 0.3">
+</body>
+</html>
